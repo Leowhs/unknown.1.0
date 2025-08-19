@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../media/book.png" type="image/x-icon">
+    <title>Aulas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            font-size: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        nav {
+            width: 50%;
+            background: linear-gradient(to right, #000000, #3f3f3f);
+            font-weight: lighter;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 10px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+        }
+
+        nav p {
+            margin: 0;
+        }
+
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 0 10px;
+        }
+
+        nav a:hover {
+            color: #c8d2ff;
+            transition: 0.6s;
+        }
+
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.555);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(to right, #000000, #3f3f3f);
+            color: white;
+        }
+
+        td strong {
+            display: inline-block;
+            width: 200px; 
+        }
+
+        ul a{
+            color: #000000;
+            font-size: 28px;
+        }
+
+        ul a:hover{
+            color: #494949;
+            transition: 0.5s;
+        }
+
+        ul {
+        list-style-type: disc; 
+        padding-left: 20px; 
+        text-align: left; 
+        }
+
+        li {
+            font-size: 28px;
+            margin-bottom: 10px; 
+        }
+
+        /* Cores das matérias */
+        .pt { color: rgb(108, 159, 226); }
+        .mat { color: rgb(212, 0, 0); }
+        .geo { color: rgb(194, 0, 194); }
+        .cien { color: rgb(73, 177, 73); }
+        .hist { color: rgb(158, 71, 0); }
+        .oe-pt { color: rgb(252, 150, 66); }
+        .oe-mat { color: rgb(221, 99, 0); }
+        .red-lei { color: rgb(255, 135, 155); }
+
+        ::selection{
+            background-color: #c8d2ff;
+            color: white;
+        }
+
+        mark{
+        background-color: #c8d2ff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aulas</h1>
+    <p>Resumo semanal de aulas de todas as matérias</p>
+
+    <nav>
+        <p>
+            <a href="https://jungleai.com" target="_blank">Jungle</a>  
+            <a href="#conteudo">Conteúdo</a>  
+            <a href="#questoes">Questões</a>
+        </p>
+    </nav>
+
+    <h1 id="conteudo">Conteúdo</h1>
+    <table>
+        <tr>
+            <th>Matéria</th>
+            <th>Conteúdo</th>
+        </tr>
+        <tr><td><strong class="pt">Português:</strong></td><td>Nada</td></tr>
+        <tr><td><strong class="mat">Matemática:</strong></td><td>Fatoração comum (evidência), agrupamento e diferença de quadrados</td></tr>
+        <tr><td><strong class="geo">Geografia:</strong></td><td>Nada</td></tr>
+        <tr><td><strong class="cien">Ciências:</strong></td><td>Nada</td></tr>
+        <tr><td><strong class="hist">História:</strong></td><td>República das Espadas *Grande Resumo*</td></tr>
+        <tr><td><strong class="oe-pt">Orientação de Estudos: Português:</strong></td><td>Nada</td></tr>
+        <tr><td><strong class="oe-mat">Orientação de Estudos: Matemática:</strong></td><td>Nada</td></tr>
+        <tr><td><strong class="red-lei">Redação e Leitura:</strong></td><td>Texto de gênero: Memórias.</td></tr>
+    </table>
+
+    <h2 id="questoes" style="text-align: left;">Questões</h2>
+
+            <p>
+                <ul>
+                    <li><a href="#pt">Português</a></li>
+                    <li><a href="#mat">Matemática</a></li>
+                    <li><a href="#geo">Geografia</a></li>
+                    <li><a href="#cien">Ciências</a></li>
+                    <li><a href="#hist">História</a></li>
+                    <li><a href="#oe-pt">Orientação de Estudos: Português</a></li>
+                    <li><a href="#oe-mat">Orientação de Estudos: Matemática</a></li>
+                    <li><a href="#red-lei">Redação e Leitura</a></li>
+                </ul>
+                
+            </p>
+
+        <strong class="mat" id="mat">Matemática:</strong> <br>
+
+        <h2>Fatoração</h2>
+        <table>
+                    <tr><th>Fator comum (evidência):</th></tr> <tr>
+                        <td>
+                            <mark>"5.x+5.y"</mark> Os números são comuns, então, não é preciso colocar ele 2 vezes, vamos manter <br> o sinal. o resultado então fica <mark>"5.(x+y)"</mark>. <br>
+                            <mark>"6ab+3a"</mark> Ao fatorar, o "6" tem que virar "3.2", para eles ficarem comuns! <mark>"3.2ab+3a".</mark> <br>
+                            Colocamos os comuns em evidência "3.a", coloque os que não foram para a evidência entre os parenteses "2b+1" (Todos os números já foram colocados em evidência, a unidade fica) <br>
+                            
+                                <p><mark>"4x².y - 6x="</mark> Siga a mesma regra que o de cima, então transformamos "4" em "2.2" e "6" em "2.3", sendo o fator comum "2".</p>
+                        </td>
+                    </tr>
+            </table>
+                    
+                        <table>
+                            <p><tr><th>Fatoração por agrupamento:</th></tr> <tr>
+                                <td>
+                                    <mark>"6x+6y+ax+ay="</mark> coloque as letras em evidência <mark>"6.(x+y)+a(x+y)="</mark> <mark>"(x+y).(6+a)"</mark> </p>
+                                    <p>Primeiro, vamos agrupar os termos em comum: <mark>"(6x+6y)+(ax+ay)"</mark> <br>
+                                    O fator comum do grupo "1" é o "6", então: "6(x+y)" <br> e o do segundo é o "a", então <mark>a(x+y)</mark>, ficando assim <mark>6(x+y)+a(x+y)</mark>. <br>
+                                    O fator comum entre os termos é (x+y), então o <br> colocamos em evidência <mark>"(x+y)(6+a)"</mark>
+                                </td>
+                            </tr>
+                            </p>
+                        </table>
+
+
+    <table>
+        <p><tr><th>Fatoração (diferença dos quadrados)</th></tr>
+            <tr>
+                <td>
+                    Fatoração da diferença de quadrados é um método que se aplica quando temos uma expressão que é a diferença entre dois quadrados perfeitos. O formato dessa expressão é "A²-B²" ela pode ser fatorada como: <mark>"A²-B²=(a+b)(a-b)"</mark> <br>
+                    Considere: <mark>"x²-49" "49"</mark> é um quadrado perfeito (pois se multiplicarmos 7.7 vai dar 49). Portanto, reescrevemos como <mark>"x²-7²"</mark>. <br>
+                    Aplicamos então a fórmula de diferença dos quadrados <mark>"x²-7²=(x-7)(x+7)"</mark>. Tendo o resultado <mark>"(x-7)(x+7)"</mark>.
+                </td>
+            </tr> </p>
+    </table>
+
+    <h2>Questões</h2>
+
+    <p>
+        <strong> 1) Quando se deve usar a técnica de agrupamento na fatoração?</strong> <br>
+        A. Quando todos os termos compartilham um fator comum <br>
+        B. Quando a expressão é um trinômio quadrado perfeito<br>
+        C. Quando a expressão é uma diferença de dois quadrados<br>
+        D. Quando há quatro ou mais termos sem um fator comum<br>
+    </p>
+
+    <p>
+        <strong> 2) Qual é a forma geral da diferença de quadrados?</strong> <br>
+        A. (a + b)(a - b)<br>
+        B. a² + b²<br>
+        C. a³ - b³<br>
+        D. (a + b)²<br>
+    </p>
+
+    <p>
+        <strong>3) Fatore a seguinte expressão utilizando o método de fator comum (evidência):</strong> <br>
+       A. 8xy+12x
+    </p>
+
+    <h2>Correção</h2>
+
+    <p>
+        <strong> 1) Quando se deve usar a técnica de agrupamento na fatoração?</strong> <br>
+        A. Quando todos os termos compartilham um fator comum <br>
+        B. Quando a expressão é um trinômio quadrado perfeito<br>
+        C. Quando a expressão é uma diferença de dois quadrados<br>
+        <strong style="color: rgb(212, 0, 0);">D.</strong> Quando há quatro ou mais termos sem um fator comum<br>
+    </p>
+
+    <p>
+        <strong> 2) Qual é a forma geral da diferença de quadrados?</strong> <br>
+        <strong style="color: rgb(212, 0, 0);">A.</strong> (a + b)(a - b)<br>
+        B. a² + b²<br>
+        C. a³ - b³<br>
+        D. (a + b)²<br>
+    </p>
+
+    <p>
+        <strong>3) Fatore a seguinte expressão utilizando o método de fator comum (evidência):</strong> <br>
+       A. 8xy+12xz <strong style="color: rgb(212, 0, 0);"> R: 4x(2y+3z)</strong>
+    </p>
+
+    <strong class="hist" id="hist">História</strong> <br>
+    <p> <strong>Leia o texto e responda as questões</strong> <br>
+         "A República da Espada ocorreu entre 1889 e 1894, sendo o primeiro período da República Velha. Por conta da marinha, o Marechal Deodoro sai do poder, dando lugar a Floriano Peixoto (ambos eram militares), que fez Deodoro perder a popularidade"  <br>
+
+         <h2>Questões</h2>
+    
+    <strong>1)</strong> Qual foi o principal motivo para a saída de Marechal Deodoro da presidência durante a <br> República da Espada? <br>
+    A. Pressão dos civis e das elites <br>
+    B. Revolta da marinha e oposição militar <br>
+
+    <strong>2)</strong> Em que período ocorreu a República da Espada? E porque você acha que essa república recebeu esse nome?
+
+        <h2>Correção</h2>
+        <strong>1)</strong> Qual foi o principal motivo para a saída de Marechal Deodoro da presidência durante a <br> República da Espada? <br>
+        A. Pressão dos civis e das elites <br>
+        <strong class="hist">B.</strong> Revolta da marinha e oposição militar <br>
+
+        <strong>2)</strong> Em que período ocorreu a República da Espada? E porque você acha que essa república recebeu esse nome? R: <strong class="hist">Ocorreu entre 1889 e 1894. O termo "espada" faz referência ao uso do poder militar para estabelecer e manter o governo.</strong>
+    </p>
+
+
+    <p>
+        <strong class="red-lei" id="red-lei">Redação e Leitura:</strong> <br>
+        <strong> 1) </strong> Leia o texto 1 e 2 abaixo e responda as questões<br>
+    </p>
+
+    <p><strong>Texto 1</strong> <br>
+     O gênero textual "Memórias" conta a vida de uma pessoa, podendo ser narrado em primeira ou em segunda pessoa.
+     Ele é muito confundido com a biografia/autobiografia, mas tem algumas características que se diferiençiam, exemplo: <br> <br>
+
+     <table>
+        <tr>
+            <th>Memórias</th>
+
+        </tr>
+
+        <tr>
+            <td> • É um relato de fatos da vida do autor <br>
+                 • É um gênero que permite uma visão do passado <br>
+                 • É um gênero que possibilita a expressão pessoal do autor  <br>
+                 • É um gênero que costura acontecimentos reais com a perspectiva pessoal e ficcional do autor </td>
+        </tr>
+        </table>
+
+           <table>
+               <tr>
+                   <th>Biografia</th>
+               </tr>
+               <tr>
+                   <td> • Relata a vida completa ou uma grande parte da trajetória de uma pessoa. <br>
+                        • Escrita por outra pessoa (se for sobre si mesmo, chama-se autobiografia). <br>
+                        • Normalmente segue uma ordem cronológica e tem tom mais informativo e objetivo. <br>
+               </tr>
+           </table>
+
+           <table>
+              <tr>
+                  <th>Autobiografia</th>
+      
+              </tr>
+      
+              <tr>
+                  <td> • Escrita pelo próprio autor sobre sua vida. <br>
+                       • Também tende a seguir uma ordem cronológica, mas pode incluir reflexões e análises pessoais. <br>
+                       • Exemplo: "Minha Vida e Minhas Experiências com a Verdade", de Mahatma Gandhi. </td>
+              </tr>
+              </table>
+
+    </p>
+
+    <p>Em resumo, embora o gênero Memórias seja muitas vezes confundido com Biografia e Autobiografia, ele se diferencia por ser mais pessoal e subjetivo, dando ao autor a chance de compartilhar suas emoções e interpretações sobre os acontecimentos. Já a biografia e a autobiografia seguem uma estrutura mais direta e informativa. Então, cada gênero tem seu jeitinho de contar a história, oferecendo diferentes maneiras de recordar e relatar a vida.</p>
+
+    <p><strong>Texto 2</strong></p> 
+    <p>Quando eu era criança, costumava passar as tardes na casa da minha avó. Ela tinha um jardim enorme, cheio de flores coloridas e árvores frutíferas. Eu adorava subir nas árvores e me esconder entre os galhos, sentindo o vento no rosto. Esses momentos ficaram guardados na minha memória, e até hoje, sempre que vejo uma árvore, lembro-me daquelas tardes calmas e felizes.</p>
+    
+    <h2>Questões</h2>
+
+    <p>A. Qual é a principal diferença entre o gênero textual "Memórias" e a Biografia/Autobiografia? <br>
+    B. O que o autor mais gostava de fazer na casa da avó? <br>
+    C. Qual sentimento o autor expressa ao recordar os momentos passados na casa da avó?</p>
+
+    <h2>Correção</h2>
+    <p>A. Qual é a principal diferença entre o gênero textual "Memórias" e a Biografia/Autobiografia? <strong class="red-lei"> R: A diferença é que Memórias conta momentos específicos da vida do autor, com um toque mais pessoal e até meio fictício às vezes. Já a Biografia fala sobre a vida inteira (ou boa parte) de alguém e é escrita por outra pessoa. A Autobiografia, por outro lado, é quando a própria pessoa escreve sobre sua vida, geralmente seguindo a ordem dos acontecimentos.</strong> <br> <br>
+    B. O que o autor mais gostava de fazer na casa da avó? <strong class="red-lei"> R: O autor adorava subir nas árvores e se esconder entre os galhos.</strong> <br> <br>
+    C. Qual sentimento o autor expressa ao recordar os momentos passados na casa da avó? <strong class="red-lei"> R: O autor expressa um sentimento de nostalgia e felicidade ao recordar os momentos tranquilos e alegres passados na casa da avó.</strong> <br> <br></p>
+
+    <img src="https://i.pinimg.com/736x/42/dc/fc/42dcfc58ee5c0c2a84e49bdea73f5ade.jpg" alt="" width="200px">
+
+</body>
+</html>

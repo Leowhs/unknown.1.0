@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>locky</title>
+  <link rel="shortcut icon" href="../media/lock.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f6f8fc;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #4a90e2;
+    }
+    form, .password-list {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 2rem;
+    }
+    input {
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+    button {
+      padding: 0.7rem 1.5rem;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #357ab8;
+    }
+    .entry {
+      border-bottom: 1px solid #eee;
+      padding: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>locky</h1>
+
+  <form id="passwordForm">
+    <input type="text" id="site" placeholder="nome do site" required />
+    <input type="text" id="username" placeholder="usuário ou email" required />
+    <input type="password" id="password" placeholder="senha" required />
+    <button type="submit">salvar senha</button>
+  </form>
+
+  <div class="password-list" id="passwordList">
+    <h2>senhas salvas</h2>
+    <div id="entries"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('passwordForm');
+    const entriesDiv = document.getElementById('entries');
+
+    function getPasswords() {
+      return JSON.parse(localStorage.getItem('locksyPasswords')) || [];
+    }
+
+    function savePasswords(passwords) {
+      localStorage.setItem('locksyPasswords', JSON.stringify(passwords));
+    }
+
+    function renderPasswords() {
+      const passwords = getPasswords();
+      entriesDiv.innerHTML = '';
+      passwords.forEach((entry, index) => {
+        const div = document.createElement('div');
+        div.classList.add('entry');
+        div.innerHTML = `
+          <strong>${entry.site}</strong><br/>
+          Usuário: ${entry.username}<br/>
+          Senha: ${entry.password}
+          <br/><button onclick="deletePassword(${index})">Excluir</button>
+        `;
+        entriesDiv.appendChild(div);
+      });
+    }
+
+    function deletePassword(index) {
+      const passwords = getPasswords();
+      passwords.splice(index, 1);
+      savePasswords(passwords);
+      renderPasswords();
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const site = document.getElementById('site').value;
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const passwords = getPasswords();
+      passwords.push({ site, username, password });
+      savePasswords(passwords);
+      renderPasswords();
+
+      form.reset();
+    });
+
+    renderPasswords();
+  </script>
+</body>
+</html>

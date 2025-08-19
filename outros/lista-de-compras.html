@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcf5ff;
+            text-align: center;
+        }
+        h2 {
+            color: #b255c9;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            padding: 5px;
+            background: #e5b3f3;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        button, input {
+            background: #b255c9;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #9a44b0;
+        }
+
+        input[type="text"] {
+        border: 2px solid #b255c9;
+        background-color: #b255c9; 
+        padding: 8px;
+        border-radius: 5px;
+        margin-right: 5px;
+        caret-color: white;
+        }
+
+        input[type="text"]::placeholder {
+            color: #ffffff; 
+        }
+
+
+        label {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lista de Compras</h2>
+    <input type="text" id="itemInput" placeholder="add">
+    <button onclick="adicionarItem()">+</button>
+    <ul id="lista"></ul>
+    
+    <script>
+        function adicionarItem() {
+            let input = document.getElementById("itemInput");
+            let itemTexto = input.value.trim();
+            if (itemTexto === "") return;
+            
+            let lista = document.getElementById("lista");
+            let li = document.createElement("li");
+            
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            
+            let label = document.createElement("label");
+            label.textContent = " " + itemTexto;
+            
+            li.appendChild(checkbox);
+            li.appendChild(label);
+            lista.appendChild(li);
+            
+            input.value = "";
+        }
+    </script>
+</body>
+</html>
