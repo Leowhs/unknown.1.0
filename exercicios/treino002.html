@@ -108,7 +108,7 @@
   <div class="container">
     <div class="treino" onclick="mostrar('A')">A = Peito / Posterior <br> (Sexta-feira)</div>
     <div class="treino" onclick="mostrar('B')">B = Bíceps / Tríceps / Abdomen <br> (Terça-feira)</div>
-    <div class="treino" onclick="mostrar('C')">C = Quadríceps <br> (Quarta-feira, Sábado)</div>
+    <div class="treino" onclick="mostrar('C')">C = Perna <br> (Quarta-feira, Sábado)</div>
     <div class="treino" onclick="mostrar('D')">D = Costas / Tríceps <br> (Segunda, Quinta)</div>
   </div>
 
@@ -232,42 +232,59 @@
         `;
       } else if (tipo === 'C') {
         conteudo = `
-          <h3>Treino C - Quadríceps</h3>
-
-          <hr>
-          Agachamento Maquina<br>
-          Séries: 4 ㅤㅤ Reps: 10/8/8/6 <br>
-          Int: 1min <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
+          <h3>Treino C - Perna</h3>
 
           Leg Press 45 <br>
           Séries: 4 ㅤㅤ Reps: 8 à 12<br>
-          Int: 1min <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Cadeira Extensora <br>
+          Cadeira Extensora Unilateral <br>
           Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
-          Int: 1min <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
           Leg Press Unilateral <br>
           Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
-          Int: 1min <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Mesa Flexora <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Cadeira Flexora <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Cadeira Abdutora <br>
+          Séries: 4 ㅤㅤ Reps: 15 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
           Cadeira Adutora <br>
-          Séries: 4 ㅤㅤ Reps: 15 <br>
-          Int: 1min <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Glúteo Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Panturrilha banco <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Panturrilha em pé  <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
         `;
