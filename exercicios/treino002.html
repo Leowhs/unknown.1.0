@@ -108,8 +108,8 @@
   <div class="container">
     <div class="treino" onclick="mostrar('A')">A = Peito / Posterior <br> (Sexta-feira)</div>
     <div class="treino" onclick="mostrar('B')">B = Bíceps / Tríceps / Abdomen <br> (Terça-feira)</div>
-    <div class="treino" onclick="mostrar('C')">C = Perna <br> (Quarta-feira, Sábado)</div>
-    <div class="treino" onclick="mostrar('D')">D = Costas / Tríceps <br> (Segunda, Quinta)</div>
+    <div class="treino" onclick="mostrar('C')">C = Pernas <br> (Quarta-feira, Sábado)</div>
+    <div class="treino" onclick="mostrar('D')">D = Costas / Lombar <br> (Segunda, Quinta)</div>
   </div>
 
   <div id="overlay">
@@ -126,7 +126,7 @@
 
       if (tipo === 'A') {
         conteudo = `
-          <h3>Treino A - Peito / Posterior</h3>
+          <h3>Treino A - Peito / Tríceps</h3>
 
           <hr>
           Fly <br>
@@ -232,7 +232,7 @@
         `;
       } else if (tipo === 'C') {
         conteudo = `
-          <h3>Treino C - Perna</h3>
+          <h3>Treino C - Pernas</h3>
 
           Leg Press 45 <br>
           Séries: 4 ㅤㅤ Reps: 8 à 12<br>
@@ -290,48 +290,54 @@
         `;
       } else if (tipo === 'D') {
         conteudo = `
-          <h3>Treino D - Costas / Tríceps</h3>
+          <h3>Treino D - Costas / Lombar</h3>
 
           <hr>
-          Remada Articulada Pronada <br>
-          Séries: 4 ㅤㅤ Reps: 10/8/8/6 <br>
-          Int: 1min <br>
+          Remada Articulada Neutra <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+        
+          Puxador Aberto Neutra <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10  <br>
+          Int:  50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
           Remada Baixa Triângulo <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Puxador Frontal Articulado Supinada <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Fly Inverso <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Puxador Frontal Aberto Neutra <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Encolhimento <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Rosca Martelo <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
-          Int: 1min <br>
+          Lombar Banco <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Rosca Direta Cross <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Prancha Isométrica <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Rosca Scott Banco <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Reto Solo Abdominal <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
         `;
