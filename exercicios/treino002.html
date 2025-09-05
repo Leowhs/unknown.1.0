@@ -98,19 +98,33 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    a {
+      color: rgb(159, 79, 189);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(209, 156, 228);
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
   <header>Olá Leonardo!</header>
-  <p>Escolha seu treino:</p>
+  <p>Escolha seu treino:
+    <a href="../index.html">index</a> >
+    <a href="treino001.html">treino001</a> >
+    <a href="treino002.html">treino002</a>
+  </p>
 
   <div class="container">
     <div class="treino" onclick="mostrar('A')">A = Peito / Posterior <br> (Sexta-feira)</div>
     <div class="treino" onclick="mostrar('B')">B = Bíceps / Tríceps / Abdomen <br> (Terça-feira)</div>
     <div class="treino" onclick="mostrar('C')">C = Pernas <br> (Quarta-feira, Sábado)</div>
     <div class="treino" onclick="mostrar('D')">D = Costas / Lombar <br> (Segunda, Quinta)</div>
-  </div>
+  </div> 
 
   <div id="overlay">
     <button id="closeBtn" onclick="fechar()">×</button>
@@ -129,104 +143,112 @@
           <h3>Treino A - Peito / Tríceps</h3>
 
           <hr>
-          Fly <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
-          Int: 1min <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-
-          <hr>
-          Supino Reto <br>
-          Séries: 4 ㅤㅤ Reps: 8/8/6/6 <br>
-          Int: 1min <br>
+          Supino Inclinado <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Supino Inclinado Halter <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
-
           Supino Vertical Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Mesa Flexora <br>
-          Séries: 4 ㅤㅤ Reps: 12 <br>
-          Int: 1min <br>
+          <hr>
+          Fly <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Cadeira Flexora <br>
-          Séries: 4 ㅤㅤ Reps: 8/8/6/6 <br>
-          Int: 1min <br>
+          <hr>
+          Supino Declinado <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Panturrilha Em Pé <br>
-          Séries: 4  ㅤㅤ Reps: 12 <br>
-          Int: 1min <br>
+          <hr>
+          Tríceps Pulley <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Panturrilha Banco <br>
-          Séries: 4 ㅤㅤ Reps: 15 <br>
-          Int: 1min <br>
+          <hr>
+          Tríceps Testa Halter <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
+
+          <hr>
+          Tríceps Francês Unilateral <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          <hr>
+          Infra Paralelas <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
         `;
       } else if (tipo === 'B') {
         conteudo = `
-          <h3>Treino B - Bíceps / Tríceps / Abdomen </h3>
+          <h3>Treino B - Ombro / Bíceps </h3>
 
           <hr>
           Desenvolvimento Halter <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
-          Int: 1min <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Elevação Frontal Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Remada Alta Cross <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
           Elevação Lateral Sentado Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Bíceps/Tríceps Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Elevação Frontal Máquina <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Tríceps Corda <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Rosca Scott Banco <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Tríceps Testa Barra <br>
-          Séries: 4 ㅤㅤ Reps: 8 <br>
-          Int: 1min <br>
+          Rosca Martelo Halter <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Abdominal Infra+Solo+Reto <br>
-          Séries: 4 ㅤㅤ Reps: Máximo <br>
-          Int: 1min <br>
+          Rosca Direta Cross <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Prancha Isométrico <br>
-          Séries: 4 ㅤㅤ Reps: Máximo <br>
-          Int: 1min <br>
+          Abdominal Oblíquo Cruzado <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
         `;
@@ -354,6 +376,10 @@
       elem.setAttribute('data-count', atual);
       elem.textContent = `Séries concluídas: ${atual}/${total}`;
     }
+
+      setTimeout(() => {
+      fechar();
+      }, 3600000);
 
     function fechar() {
       document.getElementById('overlay').style.display = 'none';
