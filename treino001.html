@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Planner Semanal de Treino</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .tables {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+
+    caption {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #444;
+      color: #fff;
+    }
+
+    a {
+      color: #252525;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #overlay-content {
+      position: relative;
+      width: 95%;
+      max-width: 900px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #overlay video {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 30%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+      margin: auto;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      color: #333;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="tables">
+
+    bugaro 20x3
+    ponte 20x3
+    flexao 8x4
+
+    <table>
+      <caption>Segunda</caption>
+      <thead>
+        <tr><th>Treino</th><th>Intervalo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Agachamento profundo – 4x20</td><td>1:30</td></tr>
+        <tr><td>Ponte com mochila – 4x15</td><td>1:00</td></tr>
+        <tr><td>Elevação lateral – 3x20 </td><td>1:00</td></tr>
+        <tr><td>Curtinhos 4 apoios – 3x15</td><td>1:00</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <caption>Terça</caption>
+      <thead>
+        <tr><th>Treino</th><th>Intervalo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Agachamento – 4x15 </td><td>1:00</td></tr>
+        <tr><td>Ponte – 4x12</td> <td>1:00</td></tr>
+        <tr><td>Elevação lateral – 3x20</td> <td>1:30</td></tr>
+        <tr><td>Marcha alta parada – 3x30</td> <td>1:30</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <caption>Quarta</caption>
+      <thead>
+        <tr><th>Treino</th><th>Intervalo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Agachamento lento – 2x15</td><td>1:00</td></tr>
+        <tr><td>Ponte com pausa de 5s – 2x15</td><td>0:05</td></tr>
+        <tr><td><a onclick="abrirVideo('../media/alongamento-posteriores.mp4')">Alongamento de posterior e glúteo</a></td><td>1:00</td></tr>
+      </tbody>
+    </table>
+
+    <a href=""></a>
+
+    <table>
+      <caption>Quinta</caption>
+      <thead>
+        <tr><th>Treino</th><th>Intervalo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Agachamento + salto – 4x10</td><td>1:00</td></tr>
+        <tr><td>Ponte unilateral – 3x10 </td><td>1:00</td></tr>
+        <tr><td>Elevação lateral – 4x20</td><td>1:30</td></tr>
+        <tr><td>Agachar devagar e subir rápido – 3x10</td><td>1:30</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <caption>Sexta</caption>
+      <thead>
+        <tr><th>Treino</th><th>Intervalo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Circuito 3x (sem intervalo):<br>20 agachamentos<br>20 glute bridge<br>20 lateral deitada<br>10 pulsos sumô</td><td>Sem intervalo</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <caption>Sábado</caption>
+      <thead>
+        <tr><th>Treino</th><th>Intervalo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Agachamento – 3x20</td><td>1:30</td></tr>
+        <tr><td>Ponte c/ perna esticada – 3x15</td><td>1:30</td></tr>
+        <tr><td>Subida de joelho parada – 3x10</td><td>1:00</td></tr>
+        <tr><td><a onclick="abrirVideo('../media/alongamento-leve.mp4')">Alongamento leve</a></td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <table style="width: 80%;">
+      <caption>Domingo</caption>
+      <thead>
+        <tr><th>Treino</th><th>Intervalo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Glute bridge leve – 2x20</td><td>1:00</td></tr>
+        <tr><td>Agachamento – 5x10</td><td>1:00</td></tr>
+        <tr><td><a onclick="abrirVideo('../media/alongamento-total.mp4')">Alongamento total</a></td><td>—</td></tr>
+        <tr><td>Respiração, hidratação e relaxamento</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<!-- Tela de Vídeo -->
+<div id="overlay">
+  <div id="overlay-content">
+    <button id="close-btn" onclick="fecharVideo()">×</button>
+    <center>
+      <video id="video-player" controls muted></video>
+    </center>
+  </div>
+</div>
+
+<script>
+  function abrirVideo(videoSrc) {
+    document.getElementById('video-player').src = videoSrc;
+    document.getElementById('overlay').style.display = 'flex';
+  }
+
+  function fecharVideo() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('video-player').pause();
+    document.getElementById('video-player').currentTime = 0;
+  }
+</script>
+
+</body>
+</html>
