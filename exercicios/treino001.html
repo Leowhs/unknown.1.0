@@ -1,236 +1,386 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Planner Semanal de Treino</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treino</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      padding: 20px;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-    }
-
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-    }
-
-    .tables {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    table {
-      border-collapse: collapse;
-      background: #fff;
-      border: 1px solid #ccc;
-      width: 300px;
-    }
-
-    caption {
-      font-size: 1.3em;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #444;
+      font-family: sans-serif;
+      background: #1e1e1e;
       color: #fff;
+      text-align: center;
     }
-
-    a {
-      color: #252525;
+    header {
+      background: #2c2c2c;
+      padding: 1rem;
+      font-size: 2rem;
+      border-bottom: 1px solid #444;
+      color: rgb(255, 255, 255);
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 600px;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 0 auto;
+    }
+    .treino {
       cursor: pointer;
-      text-decoration: none;
+      background: #3a3a3a;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: background 0.3s;
+      font-size: 1.1rem;
+      color: rgb(247, 247, 247);
     }
-
+    .treino:hover {
+      background: #555;
+    }
     #overlay {
-      display: none;
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      z-index: 9999;
-      justify-content: center;
+      background: #1e1e1e;
+      color: #fff;
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      z-index: 1000;
+      animation: fade 0.3s ease;
+      overflow-y: auto;
     }
-
-    #overlay-content {
-      position: relative;
-      width: 95%;
-      max-width: 900px;
-      border-radius: 20px;
-      overflow: hidden;
-      background: #000;
+    #overlay h3 {
+      color: rgb(159, 79, 189);
     }
-
-    #overlay video {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      width: 30%;
-      height: auto;
-      display: block;
-      border-radius: 20px;
-      margin: auto;
-    }
-
-    #close-btn {
+    #closeBtn {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #fff;
-      color: #333;
-      border: none;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      font-size: 18px;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
       cursor: pointer;
-      font-weight: bold;
+      background: none;
+      border: none;
+      color: rgb(159, 79, 189);
+      transition: transform 0.2s;
+    }
+    #closeBtn:hover {
+      transform: scale(1.2);
+    }
+    .contador {
+      display: block;
+      margin: 0.5rem auto;
+      padding: 0.5rem 1rem;
+      background: rgb(159, 79, 189);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      width: 70%;
+    }
+    .contador:hover {
+      background: rgba(159, 79, 189, 0.85);
+      transform: scale(1.05);
+    }
+    hr {
+      width: 80%;
+      border: 1px solid rgb(159, 79, 189);
+      margin: 1rem auto;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    a {
+      color: rgb(159, 79, 189);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(209, 156, 228);
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<div class="wrapper">
+  <header>Olá, Leonardo!</header>
+  <p>Escolha seu treino:
+    <a href="../index.html">index</a> >
+    <a href="treino001.html">treino001</a>
+  </p>
 
-  <div class="tables">
+  <div class="container">
+    <div class="treino" onclick="mostrar('A')">A = Peito / Tríceps / Bíceps <br> (Sexta-feira)</div>
+    <div class="treino" onclick="mostrar('B')">B = Ombro / Bíceps <br> (Terça-feira)</div>
+    <div class="treino" onclick="mostrar('C')">C = Pernas <br> (Quarta-feira, Sábado)</div>
+    <div class="treino" onclick="mostrar('D')">D = Costas / Lombar / Abdomen <br> (Segunda, Quinta)</div>
+  </div> 
 
-    bugaro 20x3
-    ponte 20x3
-    flexao 8x4
-
-    <table>
-      <caption>Segunda</caption>
-      <thead>
-        <tr><th>Treino</th><th>Intervalo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Agachamento profundo – 4x20</td><td>1:30</td></tr>
-        <tr><td>Ponte com mochila – 4x15</td><td>1:00</td></tr>
-        <tr><td>Elevação lateral – 3x20 </td><td>1:00</td></tr>
-        <tr><td>Curtinhos 4 apoios – 3x15</td><td>1:00</td></tr>
-      </tbody>
-    </table>
-
-    <table>
-      <caption>Terça</caption>
-      <thead>
-        <tr><th>Treino</th><th>Intervalo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Agachamento – 4x15 </td><td>1:00</td></tr>
-        <tr><td>Ponte – 4x12</td> <td>1:00</td></tr>
-        <tr><td>Elevação lateral – 3x20</td> <td>1:30</td></tr>
-        <tr><td>Marcha alta parada – 3x30</td> <td>1:30</td></tr>
-      </tbody>
-    </table>
-
-    <table>
-      <caption>Quarta</caption>
-      <thead>
-        <tr><th>Treino</th><th>Intervalo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Agachamento lento – 2x15</td><td>1:00</td></tr>
-        <tr><td>Ponte com pausa de 5s – 2x15</td><td>0:05</td></tr>
-        <tr><td><a onclick="abrirVideo('../media/alongamento-posteriores.mp4')">Alongamento de posterior e glúteo</a></td><td>1:00</td></tr>
-      </tbody>
-    </table>
-
-    <a href=""></a>
-
-    <table>
-      <caption>Quinta</caption>
-      <thead>
-        <tr><th>Treino</th><th>Intervalo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Agachamento + salto – 4x10</td><td>1:00</td></tr>
-        <tr><td>Ponte unilateral – 3x10 </td><td>1:00</td></tr>
-        <tr><td>Elevação lateral – 4x20</td><td>1:30</td></tr>
-        <tr><td>Agachar devagar e subir rápido – 3x10</td><td>1:30</td></tr>
-      </tbody>
-    </table>
-
-    <table>
-      <caption>Sexta</caption>
-      <thead>
-        <tr><th>Treino</th><th>Intervalo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Circuito 3x (sem intervalo):<br>20 agachamentos<br>20 glute bridge<br>20 lateral deitada<br>10 pulsos sumô</td><td>Sem intervalo</td></tr>
-      </tbody>
-    </table>
-
-    <table>
-      <caption>Sábado</caption>
-      <thead>
-        <tr><th>Treino</th><th>Intervalo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Agachamento – 3x20</td><td>1:30</td></tr>
-        <tr><td>Ponte c/ perna esticada – 3x15</td><td>1:30</td></tr>
-        <tr><td>Subida de joelho parada – 3x10</td><td>1:00</td></tr>
-        <tr><td><a onclick="abrirVideo('../media/alongamento-leve.mp4')">Alongamento leve</a></td><td>—</td></tr>
-      </tbody>
-    </table>
-
-    <table style="width: 80%;">
-      <caption>Domingo</caption>
-      <thead>
-        <tr><th>Treino</th><th>Intervalo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Glute bridge leve – 2x20</td><td>1:00</td></tr>
-        <tr><td>Agachamento – 5x10</td><td>1:00</td></tr>
-        <tr><td><a onclick="abrirVideo('../media/alongamento-total.mp4')">Alongamento total</a></td><td>—</td></tr>
-        <tr><td>Respiração, hidratação e relaxamento</td><td>—</td></tr>
-      </tbody>
-    </table>
-
+  <div id="overlay">
+    <button id="closeBtn" onclick="fechar()">×</button>
+    <div id="detalhes"></div>
   </div>
 
-</div>
+  <script>
+    function mostrar(tipo) {
+      const detalhes = document.getElementById('detalhes');
+      const overlay = document.getElementById('overlay');
 
-<!-- Tela de Vídeo -->
-<div id="overlay">
-  <div id="overlay-content">
-    <button id="close-btn" onclick="fecharVideo()">×</button>
-    <center>
-      <video id="video-player" controls muted></video>
-    </center>
-  </div>
-</div>
+      let conteudo = '';
 
-<script>
-  function abrirVideo(videoSrc) {
-    document.getElementById('video-player').src = videoSrc;
-    document.getElementById('overlay').style.display = 'flex';
-  }
+      if (tipo === 'A') {
+        conteudo = `
+          <h3>Treino A - Peito / Tríceps</h3>
 
-  function fecharVideo() {
-    document.getElementById('overlay').style.display = 'none';
-    document.getElementById('video-player').pause();
-    document.getElementById('video-player').currentTime = 0;
-  }
-</script>
+          <hr>
+          Supino Inclinado <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+
+          <hr>
+          Supino Vertical Máquina <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+
+          <hr>
+          Fly <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+
+          <hr>
+          Supino Declinado <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+
+          <hr>
+          Tríceps Pulley <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Tríceps Testa Halter <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Tríceps Francês Unilateral <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Infra Paralelas <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+        `;
+      } else if (tipo === 'B') {
+        conteudo = `
+          <h3>Treino B - Ombro / Bíceps </h3>
+
+          <hr>
+          Desenvolvimento Halter <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Remada Alta Cross <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Elevação Lateral Sentado Máquina <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Elevação Frontal Máquina <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Rosca Scott Banco <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Rosca Martelo Halter <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Rosca Direta Cross <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Abdominal Oblíquo Cruzado <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+        `;
+      } else if (tipo === 'C') {
+        conteudo = `
+          <h3>Treino C - Pernas</h3>
+          <hr>
+
+          Hack <br>
+          Séries: 3 ㅤㅤ Reps: 15<br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
+          <hr>
+
+          Leg Press 45 <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 12<br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Cadeira Extensora Unilateral <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Leg Press Unilateral <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Mesa Flexora <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Cadeira Flexora <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Cadeira Abdutora <br>
+          Séries: 4 ㅤㅤ Reps: 15 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Cadeira Adutora <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Panturrilha banco <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Panturrilha em pé  <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+        `;
+      } else if (tipo === 'D') {
+        conteudo = `
+          <h3>Treino D - Costas / Lombar</h3>
+
+          <hr>
+          Remada Articulada Neutra <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+        
+          Puxador Aberto Neutra <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10  <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Remada Baixa Triângulo <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Fly Inverso <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Encolhimento <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Lombar Banco <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Prancha Isométrica <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Reto Solo Abdominal <br>
+          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Int:  50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+        `;
+      }
+
+
+      detalhes.innerHTML = conteudo;
+      overlay.style.display = 'flex';
+    }
+
+    function contarSerie(elem, total) {
+      let atual = parseInt(elem.getAttribute('data-count')) || 0;
+      atual++;
+      if (atual > total) atual = 0;
+      elem.setAttribute('data-count', atual);
+      elem.textContent = `Séries concluídas: ${atual}/${total}`;
+    }
+
+    function fechar() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
