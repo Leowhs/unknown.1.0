@@ -121,6 +121,7 @@
   <div class="container">
     <div class="treino" onclick="mostrar('A')">A = Inferiores <br> ()</div>
     <div class="treino" onclick="mostrar('B')">B = Superiores <br> ()</div>
+    <div class="treino" onclick="mostrar('C')">C = Abdomen <br> ()</div>
   </div> 
 
   <div id="overlay">
@@ -140,127 +141,85 @@
           <h3>Treino A - Inferiores</h3>
 
           <hr>
-          Supino Inclinado <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Agachamento Búlgaro Pulo <br>
+          Séries: 3 ㅤㅤ Reps: 10 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
+
+          <hr>
+          Elevação Pélvica  <br>
+          Séries: 3 ㅤㅤ Reps: MÁX <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
+          
+          <hr>
+          Agachamento  <br>
+          Séries: 4 ㅤㅤ Reps: 20 <br>
+          Int: 1min <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+
+          <hr>
+          Afundo  <br>
+          Séries: 3 ㅤㅤ Reps: 15 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
+
+          <hr>
+          Hidrante  <br>
+          Séries: 3 ㅤㅤ Reps: 20 <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
+
+          <hr>
+          Coice Solo  <br>
+          Séries: 4 ㅤㅤ Reps: 30s <br>
           Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
 
           <hr>
-          Supino Vertical Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Agachamento Sumô  <br>
+          Séries: 3 ㅤㅤ Reps: 8 <br>
           Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-
-          <hr>
-          Fly <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-
-          <hr>
-          Supino Declinado <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-
-          <hr>
-          Tríceps Pulley <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Tríceps Testa Halter <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Tríceps Francês Unilateral <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Infra Paralelas <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
+          <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
 
         `;
       } else if (tipo === 'B') {
         conteudo = `
-          <h3>Treino B - Ombro / Bíceps </h3>
+          <h3>Treino B - Superiores </h3>
 
           <hr>
-          Desenvolvimento Halter <br>
+          Mergulho <br>
           Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
           Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Remada Alta Cross <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
+          Flexão <br>
+          Séries: 3 ㅤㅤ Reps: 8 <br>
           Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
-
-          Elevação Lateral Sentado Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Elevação Frontal Máquina <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Rosca Scott Banco <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Rosca Martelo Halter <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Rosca Direta Cross <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Abdominal Oblíquo Cruzado <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
+ 
         `;
       } else if (tipo === 'C') {
         conteudo = `
-          <h3>Treino C - Pernas</h3>
+          <h3>Treino C - Abdomen</h3>
           <hr>
 
-          Hack <br>
-          Séries: 3 ㅤㅤ Reps: 15<br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
-          <hr>
-
-          Leg Press 45 <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 12<br>
+          Legs Lower Abdominal <br>
+          Séries: 3 ㅤㅤ Reps: 8 <br>
           Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
 
-          Cadeira Extensora Unilateral <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
+          Prancha Isométrica <br>
+          Séries: 4 ㅤㅤ Reps: <br>
+          Int: 50s <br>
+          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
+          <hr>
+
+          Vacum <br>
+          Séries: 15 ㅤㅤ Reps:  <br>
           Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>
