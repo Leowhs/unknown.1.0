@@ -114,14 +114,13 @@
 
   <header>Olá, Leonardo!</header>
   <p>Escolha seu treino:
-    <a href="../index.html">index</a> >
+    <a href="exercicios.html">index</a> >
     <a href="treino002.html">treino002</a>
   </p>
 
   <div class="container">
-    <div class="treino" onclick="mostrar('A')">A = Inferiores <br> ()</div>
-    <div class="treino" onclick="mostrar('B')">B = Superiores <br> ()</div>
-    <div class="treino" onclick="mostrar('C')">C = Abdomen <br> ()</div>
+    <div class="treino" onclick="mostrar('A')">Inferiores <br> (Sábado)</div>
+    <div class="treino" onclick="mostrar('C')"> Abdômen <br> (Domingo)</div>
   </div> 
 
   <div id="overlay">
@@ -138,10 +137,10 @@
 
       if (tipo === 'A') {
         conteudo = `
-          <h3>Treino A - Inferiores</h3>
+          <h3>Inferiores</h3>
 
           <hr>
-          Agachamento Búlgaro Pulo <br>
+          Agachamento Búlgaro <br>
           Séries: 3 ㅤㅤ Reps: 10 <br>
           Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 3)">Séries concluídas: 0/3</button>
@@ -203,7 +202,7 @@
         `;
       } else if (tipo === 'C') {
         conteudo = `
-          <h3>Treino C - Abdomen</h3>
+          <h3>Abdômen</h3>
           <hr>
 
           Legs Lower Abdominal <br>
@@ -220,48 +219,6 @@
 
           Vacum <br>
           Séries: 15 ㅤㅤ Reps:  <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Leg Press Unilateral <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 12 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Mesa Flexora <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Cadeira Flexora <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Cadeira Abdutora <br>
-          Séries: 4 ㅤㅤ Reps: 15 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Cadeira Adutora <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Panturrilha banco <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
-          Int: 50s <br>
-          <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
-          <hr>
-
-          Panturrilha em pé  <br>
-          Séries: 4 ㅤㅤ Reps: 8 à 10 <br>
           Int: 50s <br>
           <button class="contador" onclick="contarSerie(this, 4)">Séries concluídas: 0/4</button>
           <hr>

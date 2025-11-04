@@ -9,10 +9,21 @@
 </head>
 <body>
     <style>
+      abbr {
+        text-decoration: underline 1.5px #e26dff;
+      }
 
       table {
       border-collapse: collapse;
       background-color: white;
+      }
+
+      table li {
+        color: rgb(0, 0, 0);
+      }
+
+      li {
+        color: white;
       }
       
       th {
@@ -23,13 +34,18 @@
       } 
 
       td{
+      font-size: 20px;
       border: 2px solid #e26dff;
       padding: 5px;
       color: rgb(0, 0, 0);
       }
 
+      #none {
+        list-style-type: none;
+      }
+
       ::selection {
-      background-color: #b255c9; ;
+      background-color: #b255c9;
       color: rgb(255, 255, 255);
       }
 
@@ -38,128 +54,111 @@
       transition: background-color 0.4s
       }
 
-      li {
-        padding: 0px;
-      }
-
       </style>
+
 <p>
-  <a href="../index.html">indice </a>>
+  <a href="../index.html">indice </a> >
   <a href="rotina.html">rotina</a>
 </p>
 
-<br>  <br>  <br>  
+<br><br><br>
 
 <img src="../media/eclipse.png" alt="">
-    <text>
-        <h1>-     rotina  ;   </h1>
-
-        <nav>
-          <p>
-            <a href="#dias-de-semana">dias de semana</a> <br>
-            <a href="#fins-de-semana">fins de semana</a> <br>
-            <a href="#rotina">rotina</a>                 <br>
-          </p>
-        </nav>
-
-    </text>
 <text>
+  <h1>- rotina ; </h1>
 
- <center>
-   
+    <p>
+      <a href="#dias-de-semana">dias de semana</a> <br>
+      <a href="#fim-de-semana">fim de semana</a> <br>
+      <a href="#rotina">rotina</a> <br>
+    </p>
+</text>
+
+<text>
+<center>
+
 <h1 id="dias-de-semana">dias de semana</h1>
 
-   <p>
-          <table>
-            <tr>
-              <th>S</th>
-              <th>T</th>
-              <th>Q</th>
-              <th>Q</th>
-              <th>S</th>
-            </tr>
+<table>
+  <tr>
+    <th>S</th>
+    <th>T</th>
+    <th>Q</th>
+    <th>Q</th>
+    <th>S</th>
+  </tr>
 
+  <tr>
+    <td><li> retomar academia & "simulado" </li></td>
+    <td><li id="fixado">passar bepantol 📌</li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="fixado">passar bepantol 📌</li></td>
+    <td><li id="none">  </li></td>
+  </tr>
 
+  <tr>
+    <td><li> fazer <a href="relatorio.html">relatório</a> </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+  </tr>
 
-            <tr>
-              <td> <li style="color: black;"> 1 aula de <a href="https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=4">js</a></li> </td>
-              <td> <li style="color: black;"> passar bepantol 📌 </li> </td>
-              <td> <li style="color: black;"> 1 aula de <a href="https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=4">js</a> </li> </td>
-              <td> <li style="color: black;">  passar bepantol 📌  </li> </td>
-              <td> <li style="color: black;"> 1 aula de <a href="https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=4">js</a> </li> </td>
-    
-            </tr>
-            
-            <tr>
-              <td> <li style="color: black;"> 1/2 aula de <a href="https://www.cursoemvideo.com/curso/curso-de-ingles-para-iniciantes-modulo-1-beginners-gratis-e-completo/aulas/modulo-01-10/modulos/por-que-aprender-ingles">ing</a> </li> </td>
-              <td> <li style="color: black;"> 1 aula de <a href="https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=4">js</a> </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-            </tr>
+  <tr>
+    <td><li> fazer plataforma E.T.E.C </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+  </tr>
 
-            <tr>
-              <td> <li style="color: black;"> fazer duolingo </li> </td>
-              <td> <li style="color: black;">  </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-            </tr>
+  <tr>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+    <td><li id="none">  </li></td>
+  </tr>
 
-          <tr>
-              <td> <li style="color: black;" > fazer <a href="https://lms.ev.org.br/mpls/WebCds/cds.aspx?action=launch&ERL=17B3E2E6-9E04-4F8C-BF48-F68C5C46B6F7&SID=yvc4tfrmhub0jvhpyctou2mr&AL=True&ResumeMode=CP&DCM=ALL&TzOffSet=-3&ServerID=1&LID=00000000-0000-0000-0000-000000000000">curso de portugues</a> </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-              <td> <li style="color: black;" id="none">  </li> </td>
-              <td> <li style="color: black;" id="none"> </li> </td>
-            </tr> 
+</table>
 
-        </table>
-        
-        <h1 id="fins-de-semana">fins de semana</h1>
+<h1 id="fim-de-semana">fim de semana</h1>
 
-        <table>
-    <tr>
+<table>
+  <tr>
     <th>S</th>
     <th>D</th>
-    </tr>
+  </tr>
 
-    <tr>
-      <td> <li style="color: black;"> lavar banheiro 📌 </li> </td>
-      <td> <li style="color: black;"> passar bepantol 📌 </li> </td>
-    </tr>
+  <tr>
+    <td><li id="fixado">lavar banheiro 📌</li></td>
+    <td><li id="fixado">passar bepantol 📌</li></td>
+  </tr>
 
-    <tr>
-      <td> <li style="color: black;"> academia (8h~11h30)</li> </td>
-      <td> <li style="color: black;"> leitura </li> </td>
-    </tr>
+  <tr>
+    <td><li>fazer plataforma e.t.e.c</li></td>
+    <td><li>  finalizar leitura de cruella </li></td>
+  </tr>
 
-    <tr>
-      <td> <li style="color: black;"> ler </li> </td>
-      <td> <li style="color: black;"> fazer duolingo </li> </td>
-    </tr>
+  <tr>
+    <td><li>ler no leia e cruella</li></td>
+    <td><li> subliminais </li></td>
+  </tr>
+</table>
 
-    <tr>
-      <td> <li style="color: black;" id="none">  </li> </td>
-      <td> <li style="color: black;"> passar uma agua nos tenis </li> </td>
-    </tr>
+<h1 id="plan">planejamento para férias</h1>
+<ol>
 
-    <tr>
-      <td> <li style="color: black;" id="none"> </li> </td>
-      <td> <li style="color: black;"> fazer lição de oe.mát & oe.pt </li> </td>
-    </tr>
-    </table>
+  <li>aprender a coreografia de loco</li>
+  <li>refazer o site unknown</li>
+  <li>afalbetizar a avó</li>
+  <li>fazer curso de phyton & js</li>
+  <li>acabar cursos de linguagens</li>
+  
+</ol>
 
- <script>
-  // Seleciona todas as tags com o ID "none"
-  const elements = document.querySelectorAll("#none");
-
-  // Adiciona o emoji no conteúdo de cada elemento
-  elements.forEach(element => {
-      element.innerHTML += "❌";
-    });
-</script>
-
+</center>
+</text>
 
 </body>
 </html>
