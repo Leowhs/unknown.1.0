@@ -140,11 +140,11 @@ a:hover {
 <p>Escolha seu treino: <a href="exercicios.html">index</a> > <a href="treino001.html">treino001</a></p>
 
 <div class="container">
-<div class="treino" onclick="mostrar('A')">A = Peito</div>
-<div class="treino" onclick="mostrar('B')">B = Ombro / Bíceps</div>
-<div class="treino" onclick="mostrar('C')">C = Pernas</div>
-<div class="treino" onclick="mostrar('D')">D = Costas / Abdômen</div>
-<div class="treino" onclick="mostrar('E')">E = Glúteos</div>
+<div class="treino" onclick="mostrar('A')">A = Peito <br> (Sexta-Feira)</div>
+<div class="treino" onclick="mostrar('B')">B = Pernas <br> (Quarta-feira)</div>
+<div class="treino" onclick="mostrar('C')">C = Costas <br> (Segunda-feira, Quinta-Feira)</div>
+<div class="treino" onclick="mostrar('D')">D = Braços <br> (Terça-feira)</div>
+<div class="treino" onclick="mostrar('E')">E = Posterior <br> (Sábado)</div>
 </div>
 
 <div id="overlay">
@@ -183,24 +183,42 @@ t+=ex("Abdominal Reto Solo + Infra Solo",4,"Máximo","1min");
 }
 
 if(tipo==='B'){
-t+=ex("Desenvolvimento Halter",4,"10","1min");
-t+=ex("Rosca Scott",4,"10","1min");
+t+=ex("Leg Press",4,"12 *PR","1min");
+t+=ex("Leg Press Unilateral",4,"12","1min");
+t+=ex("Cadeira Extensora",4,"8 a 12","1min");
+t+=ex("Cadeira Adutora",4,"15","1min");
+t+=ex("Cadeira Abdutora",4,"15","1min");
+t+=ex("Mesa Flexora",4,"15","1min");
+t+=ex("Cadeira Flexora",4,"8 a 12","1min");
 }
 
 if(tipo==='C'){
-t+=ex("Leg Press",4,"12","1min");
-t+=ex("Cadeira Extensora",4,"12","1min");
+t+=ex("Remada Baixa Supinada",5,"12/10/8/8/6 **PR","1min");
+t+=ex("Puxador Frontal Triângulo",4,"8","1min");
+t+=ex("Fly Inverso",4,"12/10/8/8/6","1min");
+t+=ex("Face Pull",4,"8","1min");
+t+=ex("Elevação Lateral Sentado Máquina",4,"8","1min");
+t+=ex("Remada Alta com Barra",4,"8 a 12","1min");
 }
 
 if(tipo==='D'){
-t+=ex("Remada Baixa",4,"10","1min");
-t+=ex("Prancha",4,"Máximo","1min");
+t+=ex("Supino Vertical em Pé",4,"8 a 12","1min");
+t+=ex("Tríceps Fechado Vertical em Pé",4,"8 a 12","1min");
+t+=ex("Tríceps Corda Cross",4,"8 a 12","1min");
+t+=ex("Rosca Scott Banco",4,"8 a 12","1min");
+t+=ex("Rosca Martelo",4,"8","1min");
+t+=ex("Rosca Direta na Polia",4,"8","1min");
 }
 
 if(tipo==='E'){
-t+=ex("Agachamento Smith",4,"12","1min");
-t+=ex("Glúteo no Cabo",4,"15","1min");
-t+=ex("Elevação Pélvica",4,"12","1min");
+t+=ex("Mesa Flexora",4,"12","1min");
+t+=ex("Flexora Vertical",4,"12","1min");
+t+=ex("Panturrilha Banco",4,"12","1min");
+t+=ex("Panturrilha Vertical",4,"15","1min");
+t+=ex("Hack",4,"12","1min");
+t+=ex("Elevação Pélvica",3,"15","1min");
+t+=ex("Abdominal Oblíquo Cruzado Solo",4,"12","1min");
+t+=ex("Abdominal Infra na Paralela",4,"12","1min");
 }
 
 detalhes.innerHTML=t;
