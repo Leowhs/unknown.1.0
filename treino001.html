@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Treino</title>
+<link rel="shortcut icon" href="../media/gym.png" type="image/x-icon">
+<title>Treino (Academia)</title>
 <style>
 body {
     margin: 0;
@@ -116,11 +117,6 @@ a:hover {
     text-decoration: underline;
 }
 
-@keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .ex {
     margin-bottom: 2px;
     font-size: 17px;
@@ -137,14 +133,13 @@ a:hover {
 <body>
 
 <header>Olá, Leonardo!</header>
-<p>Escolha seu treino: <a href="exercicios.html">index</a> > <a href="treino001.html">treino001</a></p>
+<p>Escolha seu treino: <a href="exercicios.html">índice</a> > <a href="exercicios.html">exercícios</a> > <a href="treino001.html">treino001</a></p>
 
 <div class="container">
 <div class="treino" onclick="mostrar('A')">A = Peito <br> (Sexta-Feira)</div>
 <div class="treino" onclick="mostrar('B')">B = Pernas <br> (Quarta-feira)</div>
 <div class="treino" onclick="mostrar('C')">C = Costas <br> (Segunda-feira, Quinta-Feira)</div>
 <div class="treino" onclick="mostrar('D')">D = Braços <br> (Terça-feira)</div>
-<div class="treino" onclick="mostrar('E')">E = Posterior <br> (Sábado)</div>
 </div>
 
 <div id="overlay">
@@ -157,11 +152,12 @@ function mostrar(tipo){
 const overlay=document.getElementById('overlay');
 const detalhes=document.getElementById('detalhes');
 
-function ex(nome,series,reps,int){
+function ex(nome,series,reps,carga,int){
 return `
 <div class="ex">
 <strong>${nome}</strong><br>
 Séries: ${series} &nbsp;&nbsp; Reps: ${reps}<br>
+Carga: ${carga}<br>
 Intervalo: ${int}<br>
 <button class="contador" onclick="contar(this, ${series})">Séries concluídas: 0/${series}</button>
 <hr>
@@ -172,53 +168,44 @@ Intervalo: ${int}<br>
 let t=`<h3>Treino ${tipo}</h3><hr>`;
 
 if(tipo==='A'){
-t+=ex("Supino Inclinado",4,"10","1min");
-t+=ex("Supino Declinado",4,"8/8/6/6 *PR*","1min");
-t+=ex("Supino Reto Halter",4,"8 a 10","1min");
-t+=ex("Supino Vertical em pé",4,"8","1min");
-t+=ex("Tríceps Pulley",4,"8","1min");
-t+=ex("Tríceps Francês Corda",4,"8","1min");
-t+=ex("Prancha Isométrica",4,"Máximo","1min");
-t+=ex("Abdominal Reto Solo + Infra Solo",4,"Máximo","1min");
-}
+t+=ex("Supino Inclinado","4","8 a 10","7,5kg","1min");
+t+=ex("Supino Reto Guiado","4","8 a 10","5kg PR","1min");
+t+=ex("Supino Inclinado Guiado","4","8 a 10","5kg PR","1min");
+t+=ex("Fly","4","8 a 10","12kg","1min");
+t+=ex("Tríceps Corda","4","8 a 10","12.5kg","1min");
+t+=ex("Tríceps Francês Corda","4","8","7.5kg","1min");
+t+=ex("Tríceps Testa Halter","4","8 a 10","5kg PR","1min");
+} 
 
 if(tipo==='B'){
-t+=ex("Leg Press",4,"12 *PR","1min");
-t+=ex("Leg Press Unilateral",4,"12","1min");
-t+=ex("Cadeira Extensora",4,"8 a 12","1min");
-t+=ex("Cadeira Adutora",4,"15","1min");
-t+=ex("Cadeira Abdutora",4,"15","1min");
-t+=ex("Mesa Flexora",4,"15","1min");
-t+=ex("Cadeira Flexora",4,"8 a 12","1min");
+t+=ex("Puxador Fechado Triângulo","4","8 a 10","25kg PR","1min");
+t+=ex("Remada Baixa Triângulo","4","8 a 10","39kg PR","1min");
+t+=ex("Fly Inverso","4","8 a 10","10kg","1min");
+t+=ex("Puxada Articulada","4","8 a 10","10kg","1min");
+t+=ex("Remada Articulada Aberta","4","15","40kg","1min");
+t+=ex("Lombar Banco","4","8 a 10","-","1min");
 }
 
 if(tipo==='C'){
-t+=ex("Remada Baixa Supinada",5,"12/10/8/8/6 **PR","1min");
-t+=ex("Puxador Frontal Triângulo",4,"8","1min");
-t+=ex("Fly Inverso",4,"12/10/8/8/6","1min");
-t+=ex("Face Pull",4,"8","1min");
-t+=ex("Elevação Lateral Sentado Máquina",4,"8","1min");
-t+=ex("Remada Alta com Barra",4,"8 a 12","1min");
+t+=ex("Leg Press 45","5","8 a 10","20kg PR","1min");
+t+=ex("Hack","4","8 a 10","20kg PR","1min");
+t+=ex("Cadera Extensora","4","8 a 10","","1min");
+t+=ex("Mesa Flexora","4","8 a 10","","1min");
+t+=ex("Cadeira Flexora","4","8 a 10","","1min");
+t+=ex("Cadeira Abdutora","4","8 a 10","","1min");
+t+=ex("Cadeira Adutora","4","8 a 10","","1min");
+t+=ex("Panturrilha Em Pé","4","8 a 10","20kg PR","1min");
+t+=ex("Panturrilha Banco","4","8 a 10","20kg PR","1min");
 }
 
 if(tipo==='D'){
-t+=ex("Supino Vertical em Pé",4,"8 a 12","1min");
-t+=ex("Tríceps Fechado Vertical em Pé",4,"8 a 12","1min");
-t+=ex("Tríceps Corda Cross",4,"8 a 12","1min");
-t+=ex("Rosca Scott Banco",4,"8 a 12","1min");
-t+=ex("Rosca Martelo",4,"8","1min");
-t+=ex("Rosca Direta na Polia",4,"8","1min");
-}
-
-if(tipo==='E'){
-t+=ex("Mesa Flexora",4,"12","1min");
-t+=ex("Flexora Vertical",4,"12","1min");
-t+=ex("Panturrilha Banco",4,"12","1min");
-t+=ex("Panturrilha Vertical",4,"15","1min");
-t+=ex("Hack",4,"12","1min");
-t+=ex("Elevação Pélvica",3,"15","1min");
-t+=ex("Abdominal Oblíquo Cruzado Solo",4,"12","1min");
-t+=ex("Abdominal Infra na Paralela",4,"12","1min");
+t+=ex("Desenvolvimento Articulado","4","8 a 10","7.5kg","1min");
+t+=ex("Elevação Lateral Sentado","4","8 a 10","12kg","1min");
+t+=ex("Elevação Frontal","4","8 a 10","10kg PR","1min");
+t+=ex("Remada Alta","4","8 a 10","10kg PR","1min");
+t+=ex("Rosca Direta na Polia","4","8 a 10","12.5kg","1min");
+t+=ex("Rosca Martelo","4","8 a 10","7kg PR","1min");
+t+=ex("Rosca Scott Banco","4","8 a 10","16kg","1min");
 }
 
 detalhes.innerHTML=t;
@@ -236,7 +223,9 @@ btn.dataset.n=n;
 btn.textContent=`Séries concluídas: ${n}/${total}`;
 }
 
-function fechar(){document.getElementById('overlay').style.display='none';}
+function fechar(){
+document.getElementById('overlay').style.display='none';
+}
 </script>
 
 </body>
